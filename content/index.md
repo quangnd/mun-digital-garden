@@ -1,4 +1,5 @@
 ---
+publish: true
 title: Welcome to the garden
 ---
 
