@@ -1,0 +1,192 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<div id="mun-journal-concept">
+  <div class="mj-preview-controls" aria-label="Chọn màn hình để xem">
+    <div class="mj-segments" aria-label="Trang">
+      <button type="button" data-page="home" aria-pressed="true" class="cursor-interaction">Trang chủ</button>
+      <button type="button" data-page="article" aria-pressed="false" class="cursor-interaction">Bài viết</button>
+    </div>
+    <div class="mj-segments" aria-label="Kích thước">
+      <button type="button" data-size="desktop" aria-pressed="true" class="cursor-interaction">Desktop</button>
+      <button type="button" data-size="mobile" aria-pressed="false" class="cursor-interaction">Mobile · 375</button>
+    </div>
+    <span class="mj-preview-note">Concept A · Nội dung minh họa</span>
+  </div>
+  <div class="mj-stage">
+    <div class="mj-window" data-size="desktop">
+      <div class="mj-product">
+        <header class="mj-mobile-head">
+          <button type="button" class="mj-brand cursor-interaction" data-go-home aria-label="Về trang chủ"><span class="mj-wordmark">mun<span>.</span></span><span class="mj-brand-sub">DIGITAL GARDEN</span></button>
+          <div class="mj-mobile-actions"><button type="button" class="mj-icon-button cursor-interaction" data-open-search aria-label="Tìm kiếm"><i data-lucide="search" aria-hidden="true"></i></button><button type="button" class="mj-icon-button cursor-interaction" data-menu aria-label="Mở điều hướng" aria-expanded="false"><i data-lucide="menu" aria-hidden="true"></i></button></div>
+        </header>
+        <div class="mj-layout">
+          <aside class="mj-sidebar" aria-label="Điều hướng">
+            <button type="button" class="mj-brand cursor-interaction" data-go-home aria-label="Về trang chủ"><span class="mj-wordmark">mun<span>.</span></span><span class="mj-brand-sub">DIGITAL GARDEN</span></button>
+            <p class="mj-sidebar-intro">Một nơi để nghĩ,<br>học và kết nối ý tưởng.</p>
+            <button type="button" class="mj-search-trigger cursor-interaction" data-open-search><i data-lucide="search" aria-hidden="true"></i><span>Tìm ghi chú</span></button>
+            <nav class="mj-nav"><button type="button" class="mj-active cursor-interaction" data-go-home>Trang chủ</button><button type="button" class="cursor-interaction" data-go-topics>Khám phá chủ đề</button><button type="button" class="cursor-interaction" data-go-notes>Tất cả ghi chú</button></nav>
+            <details class="mj-explorer"><summary class="cursor-interaction">Cây ghi chú</summary><div><button type="button" class="cursor-interaction" data-go-topics>AI & công cụ</button><button type="button" class="cursor-interaction" data-go-article="notes">Học tập & tư duy</button><button type="button" class="cursor-interaction" data-go-article="projects">Làm việc & dự án</button></div></details>
+            <div class="mj-sidebar-bottom"><span>Ghi lại. Kết nối. Nghĩ tiếp.</span><span>Hà Nội, Việt Nam</span></div>
+          </aside>
+          <main class="mj-content" id="mj-main">
+            <section class="mj-home" aria-label="Trang chủ">
+              <div class="mj-eyebrow">GHI CHÉP CỦA QUANG</div>
+              <h1>Một khu vườn<br>cho những ý tưởng.</h1>
+              <p class="mj-home-lead">Tôi ghi lại những điều đang học, những công cụ đang thử và những câu hỏi chưa có lời giải.</p>
+              <p class="mj-home-intro">Đây là một bộ sưu tập luôn được viết tiếp. Bạn có thể bắt đầu từ một ghi chú, rồi lần theo những kết nối để tìm điều mình quan tâm.</p>
+              <section class="mj-start"><div class="mj-eyebrow">LẦN ĐẦU GHÉ THĂM?</div><button type="button" class="mj-start-link cursor-interaction" data-go-article="notes">Bắt đầu từ cách tôi ghi chú</button><p>Một lối vào nhỏ để hiểu cách khu vườn này lớn lên.</p></section>
+              <section id="mj-topics" class="mj-topics-section"><div class="mj-section-heading"><h2>Những lối đi</h2><span>Khám phá theo chủ đề</span></div><div class="mj-topics">
+                <a href="#mj-notes" class="mj-topic cursor-interaction" data-topic="ai"><span class="mj-topic-number">01</span><h3>AI & công cụ</h3><p>Thử nghiệm nhỏ, bài học thực tế và cách làm việc cùng AI.</p></a>
+                <a href="#mj-notes" class="mj-topic cursor-interaction" data-topic="learning"><span class="mj-topic-number">02</span><h3>Học tập & tư duy</h3><p>Ghi chú, đọc sách và những cách hiểu sâu hơn một vấn đề.</p></a>
+                <a href="#mj-notes" class="mj-topic cursor-interaction" data-topic="work"><span class="mj-topic-number">03</span><h3>Làm việc & dự án</h3><p>Ra quyết định và phối hợp để đưa công việc về đích.</p></a>
+              </div></section>
+              <section id="mj-notes" class="mj-notes-section"><div class="mj-section-heading"><h2 data-list-heading>Ghi chú chọn lọc</h2><button type="button" class="mj-reset-list cursor-interaction" hidden>Tất cả chủ đề</button></div><div class="mj-note-list" aria-live="polite"></div></section>
+              <div class="mj-garden-note"><span class="mj-small-rule"></span><p>Một vài ý tưởng còn dang dở.<br>Những kết nối mới có thể làm chúng thay đổi.</p></div>
+            </section>
+            <article class="mj-article" hidden>
+              <nav class="mj-breadcrumb" aria-label="Breadcrumb"><button type="button" class="cursor-interaction" data-go-home>Trang chủ</button><span aria-hidden="true">/</span><span data-article-topic>Học tập & tư duy</span></nav>
+              <header class="mj-article-head"><div class="mj-eyebrow" data-article-kicker>GHI CHÉP & HỌC TẬP</div><h1 data-article-title>Ghi chú để hiểu,<br>không chỉ để lưu.</h1><p class="mj-article-deck" data-article-deck>Một ghi chú hữu ích không dừng ở việc giữ lại thông tin. Nó giúp mình đặt câu hỏi tốt hơn và kết nối những điều đã biết.</p><div class="mj-article-meta"><span>Quang</span><span aria-hidden="true">·</span><span>07.11.2026</span><span aria-hidden="true">·</span><span>3 phút đọc</span></div></header>
+              <details class="mj-mobile-toc"><summary class="cursor-interaction">Trong bài viết này</summary><nav><a href="#mj-section-one">Bắt đầu từ một câu hỏi</a><a href="#mj-section-two">Viết lại bằng lời của mình</a><a href="#mj-section-three">Để lại một lối đi tiếp</a></nav></details>
+              <div class="mj-prose" data-prose></div>
+              <section class="mj-backlinks"><div class="mj-eyebrow">NHỮNG KẾT NỐI</div><h2>Tiếp tục khám phá</h2><div data-related></div><details class="mj-graph"><summary class="cursor-interaction">Bản đồ liên kết</summary><p>Bản triển khai sẽ dùng Graph chuẩn của Quartz tại đây.</p></details></section>
+            </article>
+            <footer class="mj-footer"><span>Mun Digital Garden</span><span>Một bộ sưu tập luôn được viết tiếp.</span></footer>
+          </main>
+          <aside class="mj-toc" hidden aria-label="Mục lục bài viết"><div class="mj-eyebrow">TRONG BÀI VIẾT</div><a href="#mj-section-one">Bắt đầu từ một câu hỏi</a><a href="#mj-section-two">Viết lại bằng lời của mình</a><a href="#mj-section-three">Để lại một lối đi tiếp</a><div class="mj-toc-bottom">Không cần đọc theo thứ tự.<br>Hãy theo điều bạn tò mò.</div></aside>
+        </div>
+        <div class="mj-search-panel" hidden role="region" aria-label="Tìm trong nội dung minh họa"><div class="mj-search-heading"><label for="mj-search-input">Tìm ghi chú</label><button type="button" class="mj-icon-button cursor-interaction" data-close-search aria-label="Đóng tìm kiếm"><i data-lucide="x" aria-hidden="true"></i></button></div><input id="mj-search-input" placeholder="Thử: ghi chú, AI, dự án…" autocomplete="off"><div class="mj-search-results" aria-live="polite"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+ #mun-journal-concept{--mj-paper:#f7f3eb;--mj-ink:#292724;--mj-muted:#6d655c;--mj-accent:#9b4937;--mj-line:#dcd4c8;--mj-wash:#eee7da;--mj-serif:'Noto Serif',Georgia,serif;--mj-sans:'Be Vietnam Pro',Arial,sans-serif;font-family:var(--mj-sans);color:var(--mj-ink)}
+ #mun-journal-concept *{box-sizing:border-box}
+ #mun-journal-concept [hidden]{display:none!important}
+ #mun-journal-concept button,#mun-journal-concept input{font:inherit}
+ #mun-journal-concept button{color:inherit}
+ #mun-journal-concept button:focus-visible,#mun-journal-concept a:focus-visible,#mun-journal-concept summary:focus-visible{outline:2px solid var(--mj-accent);outline-offset:4px}
+ #mun-journal-concept .mj-preview-controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:0 96px 18px 0;color:light-dark(#453f37,#e7ded0);font-size:12px}
+ #mun-journal-concept .mj-segments{display:flex;border:1px solid light-dark(#d5cbbb,#655b4e);border-radius:7px;padding:3px;gap:2px}
+ #mun-journal-concept .mj-segments button{border:0;background:transparent;padding:8px 12px;border-radius:4px;color:inherit;min-height:36px}
+ #mun-journal-concept .mj-segments button[aria-pressed=true]{background:light-dark(#e9dfd0,#4c4034);color:light-dark(#342d24,#fff1df)}
+ #mun-journal-concept .mj-preview-note{font-size:11px}
+ #mun-journal-concept .mj-stage{width:100%}
+ #mun-journal-concept .mj-window{width:100%;margin:0 auto;container-type:inline-size;container-name:munpage;background:var(--mj-paper);border:1px solid var(--mj-line);border-radius:3px;overflow:clip}
+ #mun-journal-concept .mj-window[data-size=mobile]{max-width:375px;border-radius:18px}
+ #mun-journal-concept .mj-product{background:var(--mj-paper);color:var(--mj-ink);position:relative;min-width:0;font-size:14px;line-height:1.65}
+ #mun-journal-concept .mj-layout{display:grid;grid-template-columns:180px minmax(0,1fr);gap:0;padding:40px 38px 24px 28px;min-height:820px}
+ #mun-journal-concept .mj-sidebar{padding:0 22px 0 0;display:flex;flex-direction:column;align-items:flex-start;border-right:1px solid var(--mj-line)}
+ #mun-journal-concept .mj-brand{background:none;border:0;text-align:left;padding:0;display:flex;flex-direction:column}
+ #mun-journal-concept .mj-wordmark{font:500 47px/1.1 var(--mj-serif);letter-spacing:-3px}
+ #mun-journal-concept .mj-wordmark>span{color:var(--mj-accent)}
+ #mun-journal-concept .mj-brand-sub{font-size:9px;letter-spacing:2px;margin-top:9px;font-weight:500}
+ #mun-journal-concept .mj-sidebar-intro{font-size:12px;color:var(--mj-muted);margin:25px 0;line-height:1.9}
+ #mun-journal-concept .mj-search-trigger{display:flex;align-items:center;gap:8px;width:100%;padding:9px 10px;background:transparent;border:1px solid var(--mj-line);font-size:11px;border-radius:3px;text-align:left}
+ #mun-journal-concept .mj-search-trigger svg{width:15px;height:15px}
+ #mun-journal-concept .mj-nav{display:flex;flex-direction:column;align-items:flex-start;gap:5px;margin:24px 0 20px;width:100%}
+ #mun-journal-concept .mj-nav button{border:0;background:none;text-align:left;padding:7px 0;font-size:12px}
+ #mun-journal-concept .mj-nav .mj-active{color:var(--mj-accent);font-weight:600}
+ #mun-journal-concept .mj-explorer{font-size:11px;border-top:1px solid var(--mj-line);padding-top:15px;width:100%;color:var(--mj-muted)}
+ #mun-journal-concept .mj-explorer div{display:flex;flex-direction:column;align-items:flex-start;padding:9px 0}
+ #mun-journal-concept .mj-explorer button{border:0;background:none;text-align:left;font-size:11px;padding:7px 0}
+ #mun-journal-concept .mj-sidebar-bottom{display:flex;flex-direction:column;gap:6px;margin-top:auto;padding-top:60px;color:var(--mj-muted);font-size:10px;line-height:1.8}
+ #mun-journal-concept .mj-content{min-width:0;padding-left:40px}
+ #mun-journal-concept .mj-eyebrow{font-size:10px;line-height:1.7;letter-spacing:1.5px;font-weight:500;color:var(--mj-accent)}
+ #mun-journal-concept h1,#mun-journal-concept h2,#mun-journal-concept h3{font-family:var(--mj-serif);font-weight:500;color:var(--mj-ink);text-wrap:pretty}
+ #mun-journal-concept h1{font-size:42px;line-height:1.35;letter-spacing:-1.2px;margin:19px 0 20px}
+ #mun-journal-concept h2{font-size:23px;line-height:1.5;letter-spacing:-.4px;margin:0}
+ #mun-journal-concept h3{font-size:18px;line-height:1.5}
+ #mun-journal-concept p{margin:0}
+ #mun-journal-concept .mj-home-lead{font-size:16px;line-height:1.85;max-width:540px}
+ #mun-journal-concept .mj-home-intro{font-size:13px;line-height:1.95;color:var(--mj-muted);max-width:520px;margin:14px 0 0}
+ #mun-journal-concept .mj-start{border-left:2px solid var(--mj-accent);padding:2px 0 2px 19px;margin:32px 0 40px}
+ #mun-journal-concept .mj-start-link{border:0;background:transparent;padding:6px 0;font-family:var(--mj-serif);font-size:19px;text-align:left;line-height:1.6}
+ #mun-journal-concept .mj-start-link span{color:var(--mj-accent);margin-left:8px}
+ #mun-journal-concept .mj-start p{font-size:11px;color:var(--mj-muted)}
+ #mun-journal-concept .mj-section-heading{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:17px;flex-wrap:wrap}
+ #mun-journal-concept .mj-section-heading>span{color:var(--mj-muted);font-size:10px}
+ #mun-journal-concept .mj-topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+ #mun-journal-concept .mj-topic{color:var(--mj-ink);text-decoration:none;border-top:1px solid var(--mj-line);padding-top:12px;display:flex;flex-direction:column;min-width:0}
+ #mun-journal-concept .mj-topic-number{font-size:10px;color:var(--mj-accent)}
+ #mun-journal-concept .mj-topic h3{font-size:17px;margin:8px 0 9px;letter-spacing:-.3px}
+ #mun-journal-concept .mj-topic p{font-size:11px;line-height:1.85;color:var(--mj-muted)}
+ #mun-journal-concept .mj-topic-bottom{font-size:10px;margin-top:auto;padding-top:17px;color:var(--mj-accent);display:flex;justify-content:space-between}
+ #mun-journal-concept .mj-notes-section{margin-top:39px;scroll-margin-top:16px}
+ #mun-journal-concept .mj-note-row{display:block;width:100%;padding:17px 0;border:0;border-top:1px solid var(--mj-line);background:transparent;text-align:left}
+ #mun-journal-concept .mj-note-row strong{font-family:var(--mj-serif);font-weight:500;font-size:17px;line-height:1.65;display:block}
+ #mun-journal-concept .mj-note-row p{color:var(--mj-muted);font-size:11px;line-height:1.8;margin-top:5px}
+ #mun-journal-concept .mj-note-row small{font-size:10px;color:var(--mj-accent);display:block;margin-top:7px}
+ #mun-journal-concept .mj-note-arrow{color:var(--mj-accent);align-self:start;font-size:17px}
+ #mun-journal-concept .mj-reset-list{background:transparent;border:0;color:var(--mj-accent);font-size:11px;padding:5px 0}
+ #mun-journal-concept .mj-garden-note{display:flex;gap:13px;align-items:flex-start;margin:33px 0 30px;color:var(--mj-muted);font-size:11px;line-height:1.9}
+ #mun-journal-concept .mj-small-rule{width:22px;height:1px;background:var(--mj-accent);margin-top:10px;flex-shrink:0}
+ #mun-journal-concept .mj-footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--mj-line);padding-top:17px;margin-top:30px;font-size:9px;color:var(--mj-muted)}
+ #mun-journal-concept .mj-mobile-head{display:none}
+ #mun-journal-concept .mj-article h1{font-size:38px;line-height:1.45;margin:13px 0 17px}
+ #mun-journal-concept .mj-breadcrumb{display:flex;gap:9px;flex-wrap:wrap;font-size:10px;color:var(--mj-muted);margin-bottom:28px}
+ #mun-journal-concept .mj-breadcrumb button{padding:0;background:none;border:0;font-size:inherit}
+ #mun-journal-concept .mj-article-deck{font-size:15px;line-height:1.85;color:var(--mj-muted)}
+ #mun-journal-concept .mj-article-meta{display:flex;gap:9px;flex-wrap:wrap;font-size:10px;color:var(--mj-muted);margin-top:18px}
+ #mun-journal-concept .mj-article-head{padding-bottom:25px;border-bottom:1px solid var(--mj-line);margin-bottom:29px}
+ #mun-journal-concept .mj-prose{font-size:16px;line-height:1.95;overflow-wrap:break-word}
+ #mun-journal-concept .mj-prose p{margin:0 0 21px}
+ #mun-journal-concept .mj-prose h2{font-size:25px;margin:32px 0 15px;scroll-margin-top:20px}
+ #mun-journal-concept .mj-prose a{color:var(--mj-accent);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+ #mun-journal-concept .mj-prose blockquote{font-family:var(--mj-serif);font-size:21px;line-height:1.8;border-left:2px solid var(--mj-accent);padding:1px 0 1px 20px;margin:27px 0}
+ #mun-journal-concept .mj-prose blockquote p{margin:0}
+ #mun-journal-concept .mj-prose figure{margin:28px 0}
+ #mun-journal-concept .mj-prose figcaption{font-size:11px;color:var(--mj-muted);margin-top:10px;line-height:1.8}
+ #mun-journal-concept .mj-note-example{padding:23px 25px;background:var(--mj-wash);border-radius:2px;font-size:14px;line-height:1.9}
+ #mun-journal-concept .mj-note-example strong{font-weight:600}
+ #mun-journal-concept .mj-note-example p{margin:10px 0 0}
+ #mun-journal-concept .mj-backlinks{border-top:1px solid var(--mj-line);margin-top:38px;padding-top:24px}
+ #mun-journal-concept .mj-backlinks h2{font-size:23px;margin:6px 0 14px}
+ #mun-journal-concept .mj-backlinks button{display:block;background:none;border:0;padding:7px 0;text-align:left;color:var(--mj-accent);font-size:13px;text-decoration:underline;text-underline-offset:4px}
+ #mun-journal-concept .mj-graph{font-size:11px;color:var(--mj-muted);margin-top:21px;padding-top:16px;border-top:1px solid var(--mj-line)}
+ #mun-journal-concept .mj-graph p{margin:12px 0;line-height:1.8}
+ #mun-journal-concept .mj-toc{display:none;padding:48px 0 0 24px}
+ #mun-journal-concept .mj-toc a{display:block;font-size:10px;color:var(--mj-muted);text-decoration:none;line-height:1.9;margin:13px 0;padding-left:10px;border-left:1px solid var(--mj-line)}
+ #mun-journal-concept .mj-toc-bottom{color:var(--mj-muted);font-family:var(--mj-serif);font-style:italic;font-size:12px;margin-top:33px;line-height:1.9}
+ #mun-journal-concept .mj-mobile-toc{display:none}
+ #mun-journal-concept .mj-search-panel{position:absolute;top:24px;left:20px;right:20px;max-width:520px;margin:0 auto;z-index:5;background:var(--mj-paper);border:1px solid var(--mj-line);box-shadow:0 12px 50px #29272425;padding:20px;border-radius:5px}
+ #mun-journal-concept .mj-search-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:14px}
+ #mun-journal-concept .mj-search-heading label{font-family:var(--mj-serif);font-size:24px}
+ #mun-journal-concept .mj-icon-button{display:flex;align-items:center;justify-content:center;min-width:40px;min-height:40px;padding:8px;border:0;background:none}
+ #mun-journal-concept .mj-icon-button svg{width:19px;height:19px}
+ #mun-journal-concept .mj-search-panel input{width:100%;font-size:16px;padding:12px;background:var(--mj-paper);color:var(--mj-ink);border:1px solid var(--mj-line);border-radius:3px}
+ #mun-journal-concept .mj-search-results{margin-top:12px}
+ #mun-journal-concept .mj-search-results p{font-size:12px;color:var(--mj-muted);padding:12px 0}
+ @container munpage (min-width:960px){#mun-journal-concept .mj-layout[data-reading=true]{grid-template-columns:165px minmax(0,1fr) 150px}#mun-journal-concept .mj-layout[data-reading=true] .mj-content{padding-left:32px}#mun-journal-concept .mj-toc:not([hidden]){display:block}}
+ @container munpage (max-width:740px){#mun-journal-concept .mj-layout{grid-template-columns:145px minmax(0,1fr);padding:30px 24px 22px 20px}#mun-journal-concept .mj-sidebar{padding-right:17px}#mun-journal-concept .mj-content{padding-left:26px}#mun-journal-concept h1{font-size:34px}#mun-journal-concept .mj-topics{grid-template-columns:1fr;gap:16px}#mun-journal-concept .mj-topic{display:grid;grid-template-columns:22px 1fr;column-gap:10px}#mun-journal-concept .mj-topic h3{margin:0 0 5px}#mun-journal-concept .mj-topic p,#mun-journal-concept .mj-topic-bottom{grid-column:2}#mun-journal-concept .mj-topic-bottom{padding-top:9px;margin:0}#mun-journal-concept .mj-section-heading>span{display:none}}
+ @container munpage (max-width:540px){#mun-journal-concept .mj-mobile-head{display:flex;justify-content:space-between;align-items:center;padding:19px 22px 17px;border-bottom:1px solid var(--mj-line);gap:12px}#mun-journal-concept .mj-wordmark{font-size:33px;letter-spacing:-2px}#mun-journal-concept .mj-brand-sub{font-size:8px;margin-top:4px;letter-spacing:1.5px}#mun-journal-concept .mj-mobile-actions{display:flex;gap:2px}#mun-journal-concept .mj-layout{display:block;padding:28px 23px 23px;min-height:0}#mun-journal-concept .mj-sidebar{display:none}#mun-journal-concept .mj-product[data-menu-open=true] .mj-sidebar{display:flex;border-right:0;border-bottom:1px solid var(--mj-line);padding:0 0 22px;margin-bottom:27px}#mun-journal-concept .mj-sidebar>.mj-brand,#mun-journal-concept .mj-sidebar-intro,#mun-journal-concept .mj-sidebar-bottom{display:none}#mun-journal-concept .mj-nav{margin-top:13px;margin-bottom:13px;gap:0;width:100%}#mun-journal-concept .mj-nav button{min-height:44px;width:100%;font-size:14px}#mun-journal-concept .mj-search-trigger{font-size:13px;padding:12px}#mun-journal-concept .mj-explorer{font-size:13px}#mun-journal-concept .mj-explorer button{font-size:13px;min-height:44px}#mun-journal-concept .mj-content{padding:0}#mun-journal-concept h1{font-size:33px;letter-spacing:-.9px;line-height:1.43;margin:15px 0 20px}#mun-journal-concept .mj-home-lead{font-size:16px;line-height:1.9}#mun-journal-concept .mj-home-intro{font-size:13px;line-height:1.95}#mun-journal-concept .mj-start{margin:29px 0 34px;padding-left:15px}#mun-journal-concept .mj-start-link{font-size:19px;min-height:44px}#mun-journal-concept .mj-start p{font-size:12px}#mun-journal-concept .mj-topic p{font-size:13px;line-height:1.85}#mun-journal-concept .mj-topic h3{font-size:19px}#mun-journal-concept .mj-topic-bottom{font-size:12px;padding-top:9px}#mun-journal-concept .mj-topics{gap:18px}#mun-journal-concept .mj-topic{padding-top:15px}#mun-journal-concept .mj-note-row strong{font-size:18px}#mun-journal-concept .mj-note-row p{font-size:12px;line-height:1.9}#mun-journal-concept .mj-note-row small{font-size:11px}#mun-journal-concept .mj-garden-note{font-size:12px}#mun-journal-concept .mj-footer{font-size:10px;line-height:1.9}#mun-journal-concept .mj-article h1{font-size:32px;line-height:1.45;letter-spacing:-.7px}#mun-journal-concept .mj-article-deck{font-size:16px;line-height:1.9}#mun-journal-concept .mj-prose{font-size:17px;line-height:1.9}#mun-journal-concept .mj-prose h2{font-size:24px;line-height:1.55}#mun-journal-concept .mj-prose blockquote{font-size:21px;padding-left:16px}#mun-journal-concept .mj-article-meta{font-size:11px;gap:7px}#mun-journal-concept .mj-breadcrumb{font-size:11px;margin-bottom:24px}#mun-journal-concept .mj-article-head{margin-bottom:20px}#mun-journal-concept .mj-mobile-toc{display:block;border-bottom:1px solid var(--mj-line);padding:0 0 16px;margin-bottom:24px;color:var(--mj-muted);font-size:12px}#mun-journal-concept .mj-mobile-toc summary{min-height:28px}#mun-journal-concept .mj-mobile-toc nav{display:flex;flex-direction:column;margin-top:9px}#mun-journal-concept .mj-mobile-toc a{padding:8px 0;color:var(--mj-muted);text-decoration:none}#mun-journal-concept .mj-backlinks button{font-size:14px;min-height:44px}#mun-journal-concept .mj-graph{font-size:12px}#mun-journal-concept .mj-note-example{padding:19px;font-size:14px}#mun-journal-concept .mj-search-panel{top:16px;left:12px;right:12px;padding:17px}}
+ @media(max-width:460px){#mun-journal-concept .mj-preview-controls{padding-right:0;gap:8px}#mun-journal-concept .mj-segments button{min-height:44px;padding:7px 10px}#mun-journal-concept .mj-preview-note{width:100%}}
+ @media(pointer:coarse){#mun-journal-concept .mj-icon-button{min-width:44px;min-height:44px}#mun-journal-concept .mj-explorer summary{min-height:44px}#mun-journal-concept .mj-graph summary{min-height:44px}}
+
+ #mun-journal-concept .mj-note-row strong,#mun-journal-concept .mj-topic h3,#mun-journal-concept .mj-start-link{text-decoration-line:underline;text-decoration-thickness:1px;text-decoration-color:var(--mj-line);text-underline-offset:5px}
+ #mun-journal-concept .mj-note-row:hover strong,#mun-journal-concept .mj-note-row:focus-visible strong,#mun-journal-concept .mj-topic:hover h3,#mun-journal-concept .mj-topic:focus-visible h3,#mun-journal-concept .mj-start-link:hover,#mun-journal-concept .mj-start-link:focus-visible{color:var(--mj-accent);text-decoration-color:var(--mj-accent)}
+</style>
+<script>
+(()=>{
+ const root=document.getElementById('mun-journal-concept');
+ const entries=[
+  {id:'notes',topic:'learning',label:'Học tập & tư duy',kicker:'GHI CHÉP & HỌC TẬP',title:'Ghi chú để hiểu, không chỉ để lưu.',description:'Từ một nơi cất thông tin đến một công cụ để suy nghĩ.',deck:'Một ghi chú hữu ích không dừng ở việc giữ lại thông tin. Nó giúp mình đặt câu hỏi tốt hơn và kết nối những điều đã biết.'},
+  {id:'ai',topic:'ai',label:'AI & công cụ',kicker:'THỬ NGHIỆM VỚI AI',title:'Một thử nghiệm nhỏ trước một hệ thống lớn.',description:'Bắt đầu với một câu hỏi rõ ràng và một cách kiểm chứng đơn giản.',deck:'Khi một công cụ mới có thể làm rất nhiều thứ, điều khó nhất đôi khi là chọn một việc đủ nhỏ để biết nó có thực sự hữu ích hay không.'},
+  {id:'projects',topic:'work',label:'Làm việc & dự án',kicker:'LÀM VIỆC & DỰ ÁN',title:'Khi một dependency trở thành nút thắt.',description:'Nhìn vào điều kiện để công việc đi tiếp, thay vì chỉ nhìn deadline.',deck:'Một kế hoạch có thể trông hợp lý ở từng đầu việc, nhưng vẫn chậm lại ở nơi các nhóm cần chờ nhau. Đó là lúc cần nhìn vào các mối phụ thuộc.'}
+ ];
+ const prose={
+ notes:`<p>Có lúc tôi lưu được rất nhiều thông tin, nhưng khi cần dùng lại thì vẫn phải bắt đầu gần như từ đầu. Vấn đề không hẳn nằm ở chỗ thiếu ghi chú. Có thể tôi chưa dành đủ thời gian để hiểu chúng.</p><h2 id="mj-section-one">Bắt đầu từ một câu hỏi</h2><p>Thay vì chép lại cả một bài viết, tôi thử hỏi: điều gì trong bài này thay đổi cách mình nhìn một vấn đề? Một câu hỏi cụ thể giúp ghi chú có điểm tựa.</p><blockquote><p>Một ghi chú tốt nên để lại một điều mình có thể nghĩ tiếp.</p></blockquote><h2 id="mj-section-two">Viết lại bằng lời của mình</h2><p>Khi phải giải thích một ý tưởng bằng ngôn ngữ của mình, những chỗ chưa hiểu thường lộ ra. Tôi xem đó là điểm bắt đầu cho việc học, thay vì một lỗi cần che đi.</p><figure><div class="mj-note-example"><strong>Câu hỏi: Vì sao tôi nhớ một số ý tưởng lâu hơn?</strong><p>Có lẽ vì tôi đã dùng chúng để giải thích một trải nghiệm cụ thể. Lần sau, hãy thêm một ví dụ từ công việc vào ghi chú mới.</p></div><figcaption>Một ví dụ ghi chú ngắn: câu hỏi, cách hiểu hiện tại và điều muốn thử tiếp.</figcaption></figure><h2 id="mj-section-three">Để lại một lối đi tiếp</h2><p>Tôi thêm liên kết khi nó giúp giải thích một mối quan hệ. Ý tưởng này gần với <a href="#mj-related">việc học qua thử nghiệm</a>: mỗi ghi chú là một cách hiểu tạm thời, có thể được sửa khi xuất hiện bằng chứng mới.</p><p>Không phải ghi chú nào cũng cần hoàn chỉnh. Nhưng mỗi ghi chú nên có một lý do để mình quay lại.</p>`,
+ ai:`<p>Tôi thường hào hứng trước khả năng của một công cụ mới. Nhưng một buổi thử nghiệm bận rộn chưa chắc đã trả lời được câu hỏi: công cụ này giúp mình làm việc tốt hơn ở đâu?</p><h2 id="mj-section-one">Bắt đầu từ một câu hỏi</h2><p>Chọn một việc đang lặp lại trong công việc. Ví dụ, tổng hợp một cập nhật dự án từ ba nguồn và chỉ ra thông tin còn thiếu.</p><blockquote><p>Thu nhỏ phạm vi để nhìn rõ giá trị.</p></blockquote><h2 id="mj-section-two">Viết lại bằng lời của mình</h2><p>Trước khi chạy thử, viết ra kết quả mong đợi. Một bản tổng hợp tốt cần đúng sự kiện, dẫn được nguồn và phân biệt điều đã biết với điều đang giả định.</p><figure><div class="mj-note-example"><strong>Thử nghiệm: Một bản cập nhật dự án</strong><p>Dùng cùng một bộ dữ liệu nhỏ. So sánh kết quả với bản tự viết và ghi lại những lỗi có thể làm thay đổi quyết định.</p></div><figcaption>Phạm vi nhỏ giúp việc kiểm chứng rõ ràng hơn.</figcaption></figure><h2 id="mj-section-three">Để lại một lối đi tiếp</h2><p>Lưu lại điều công cụ làm tốt, điều cần người kiểm tra và một câu hỏi cho lần thử tiếp theo. Những ghi chép này có thể kết nối với <a href="#mj-related">cách ghi chú để hiểu</a>.</p>`,
+ projects:`<p>Một nhóm hoàn thành phần việc của mình chưa có nghĩa là luồng công việc đã đi tiếp. Đôi khi phần khó nhất là chờ một bản tích hợp, môi trường kiểm thử hoặc một quyết định từ nhóm khác.</p><h2 id="mj-section-one">Bắt đầu từ một câu hỏi</h2><p>Điều gì phải xảy ra để nhóm tiếp theo có thể bắt đầu? Câu hỏi này cụ thể hơn việc chỉ hỏi ngày hoàn thành.</p><blockquote><p>Một deadline chỉ hữu ích khi điều kiện để đạt nó đủ rõ.</p></blockquote><h2 id="mj-section-two">Viết lại bằng lời của mình</h2><p>Mô tả dependency bằng một đầu ra có thể kiểm tra. Ví dụ: bản firmware có chức năng cần thiết, đã qua kiểm tra tích hợp cơ bản và có hướng dẫn sử dụng.</p><figure><div class="mj-note-example"><strong>Điều kiện để bắt đầu kiểm thử</strong><p>Có bản tích hợp sử dụng được, môi trường sẵn sàng và các lỗi chặn đã được phân loại.</p></div><figcaption>Đầu ra cụ thể giúp hai nhóm có cùng cách hiểu về “sẵn sàng”.</figcaption></figure><h2 id="mj-section-three">Để lại một lối đi tiếp</h2><p>Khi có thay đổi, cập nhật cả tác động và hành động tiếp theo. Có thể dùng <a href="#mj-related">một thử nghiệm nhỏ</a> để kiểm tra giả định trước khi điều chỉnh toàn bộ kế hoạch.</p>`
+ };
+ const home=root.querySelector('.mj-home'),article=root.querySelector('.mj-article'),layout=root.querySelector('.mj-layout'),product=root.querySelector('.mj-product'),windowEl=root.querySelector('.mj-window'),searchPanel=root.querySelector('.mj-search-panel'),searchInput=root.querySelector('#mj-search-input');
+ let current='notes';
+ function closeMenu(){delete product.dataset.menuOpen;root.querySelector('[data-menu]').setAttribute('aria-expanded','false')}
+ function rows(items){return items.map(e=>`<button type="button" class="mj-note-row cursor-interaction" data-go-article="${e.id}"><span><strong>${e.title}</strong><p>${e.description}</p><small>${e.label}</small></span></button>`).join('')}
+ function list(topic){const names={ai:'AI & công cụ',learning:'Học tập & tư duy',work:'Làm việc & dự án'};root.querySelector('.mj-note-list').innerHTML=rows(topic?entries.filter(e=>e.topic===topic):entries);root.querySelector('[data-list-heading]').textContent=topic?names[topic]:'Ghi chú chọn lọc';root.querySelector('.mj-reset-list').hidden=!topic}
+ function show(page,id){if(id)current=id;home.hidden=page!=='home';article.hidden=page!=='article';root.querySelector('.mj-toc').hidden=page!=='article';layout.dataset.reading=String(page==='article');root.querySelectorAll('[data-page]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.page===page)));searchPanel.hidden=true;closeMenu();if(page==='article'){const e=entries.find(e=>e.id===current);root.querySelector('[data-article-title]').textContent=e.title;root.querySelector('[data-article-topic]').textContent=e.label;root.querySelector('[data-article-kicker]').textContent=e.kicker;root.querySelector('[data-article-deck]').textContent=e.deck;root.querySelector('[data-prose]').innerHTML=prose[e.id];root.querySelector('[data-related]').id='mj-related';root.querySelector('[data-related]').innerHTML=entries.filter(x=>x.id!==e.id).map(x=>`<button type="button" class="cursor-interaction" data-go-article="${x.id}">${x.title}</button>`).join('')} }
+ root.addEventListener('click',e=>{const b=e.target.closest('button,a');if(!b)return;if(b.hasAttribute('data-page'))show(b.dataset.page);if(b.hasAttribute('data-size')){windowEl.dataset.size=b.dataset.size;root.querySelectorAll('[data-size][aria-pressed]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.size===b.dataset.size)))}if(b.hasAttribute('data-go-home')){show('home');root.scrollIntoView({block:'start'})}if(b.hasAttribute('data-go-article')){show('article',b.dataset.goArticle);root.scrollIntoView({block:'start'})}if(b.hasAttribute('data-go-topics')||b.hasAttribute('data-go-notes')){show('home');list();root.querySelector(b.hasAttribute('data-go-topics')?'#mj-topics':'#mj-notes').scrollIntoView({block:'start'})}if(b.hasAttribute('data-topic')){e.preventDefault();list(b.dataset.topic);root.querySelector('#mj-notes').scrollIntoView({block:'start'})}if(b.classList.contains('mj-reset-list'))list();if(b.hasAttribute('data-menu')){const open=product.dataset.menuOpen!=='true';product.dataset.menuOpen=String(open);b.setAttribute('aria-expanded',String(open))}if(b.hasAttribute('data-open-search')){searchPanel.hidden=false;root.querySelector('.mj-search-results').innerHTML=rows(entries);searchInput.value='';searchPanel.scrollIntoView({block:'start'});searchInput.focus()}if(b.hasAttribute('data-close-search'))searchPanel.hidden=true;});
+ searchInput.addEventListener('input',()=>{const q=searchInput.value.toLocaleLowerCase('vi');const items=entries.filter(e=>(e.title+' '+e.description+' '+e.label).toLocaleLowerCase('vi').includes(q));root.querySelector('.mj-search-results').innerHTML=items.length?rows(items):'<p>Không tìm thấy trong ba ghi chú minh họa.</p>'});
+ root.addEventListener('keydown',e=>{if(e.key==='Escape'){searchPanel.hidden=true;closeMenu()}});
+ list();show('home');
+})();
+</script>

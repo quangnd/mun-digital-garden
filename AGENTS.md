@@ -1,7 +1,7 @@
 # Agent rules
 
 - Scope: this repo publishes a Quartz v5 site. Only `content/` is published; keep it to intentional, original notes.
-- Keep the default theme, navigation and layout. Config changes go in `quartz.config.yaml`.
+- Follow root `DESIGN.md` for the approved Mun Journal visual direction. Prefer `quartz.config.yaml` and `quartz/styles/custom.scss`; preserve native Quartz navigation and publishing behavior.
 - Never commit secrets, `node_modules/`, `public/` or `.quartz/`.
 - Do not read any Obsidian vault or touch other repositories.
 - No remote GitHub actions (repo creation, push, PR, Pages settings) without explicit user approval.
