@@ -1,4 +1,5 @@
 ---
+publish: true
 title: Garden map
 tags:
   - meta
