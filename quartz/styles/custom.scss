@@ -115,7 +115,8 @@ a {
   }
 }
 
-// Navigation, popovers and component chrome keep native behavior but drop underline noise.
+// Navigation and component chrome drop underline noise. Popovers hold article content, so their
+// inline links keep the underline from the rules above (popover breadcrumbs match .breadcrumb-container).
 .page-title a,
 .explorer a,
 .toc a,
@@ -123,8 +124,7 @@ a {
 .search a,
 .breadcrumb-container a,
 .footer a,
-.graph a,
-.popover a {
+.graph a {
   text-decoration: none;
 }
 
