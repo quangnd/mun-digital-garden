@@ -18,30 +18,39 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Be Vietnam Pro
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      header:
+        name: Noto Serif
+        weights: [400, 500]
+        includeItalic: false
+      body:
+        name: Be Vietnam Pro
+        weights: [400, 600]
+        includeItalic: true
+      code:
+        name: IBM Plex Mono
+        weights: [400, 600]
+        includeItalic: false
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        light: "#F7F3EB"
+        lightgray: "#DCD4C8"
+        gray: "#6D655C"
+        darkgray: "#3A3733"
+        dark: "#292724"
+        secondary: "#9B4937"
+        tertiary: "#7A3526"
+        highlight: rgba(155, 73, 55, 0.1)
+        textHighlight: "#EEE7DA"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#24211E"
+        lightgray: "#51483F"
+        gray: "#C0B6A8"
+        darkgray: "#E4DED2"
+        dark: "#F2EDE3"
+        secondary: "#D98C73"
+        tertiary: "#E8A68F"
+        highlight: rgba(217, 140, 115, 0.14)
+        textHighlight: "#302B25"
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
@@ -79,6 +88,7 @@ plugins:
     enabled: true
     options:
       markdownLinkResolution: shortest
+      externalLinkIcon: false
     order: 60
   - source: "@quartz-community/description"
     enabled: true
@@ -103,7 +113,18 @@ plugins:
   - source: "@quartz-community/quartz-fonts"
     enabled: true
     options:
-      header: Be Vietnam Pro
+      header:
+        name: Noto Serif
+        weights: [400, 500]
+        includeItalic: false
+      body:
+        name: Be Vietnam Pro
+        weights: [400, 600]
+        includeItalic: true
+      code:
+        name: IBM Plex Mono
+        weights: [400, 600]
+        includeItalic: false
   - source: "@quartz-themes/core"
     enabled: false
     options:
