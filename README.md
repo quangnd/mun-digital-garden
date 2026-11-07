@@ -23,7 +23,7 @@ One-time setup: repository Settings -> Pages -> Source: GitHub Actions.
 ## Daily workflow (Obsidian + Quartz Syncer)
 
 - **Publish / update:** put `publish: true` in the note's frontmatter, then run Syncer "Publish". It commits to `main` and the deploy runs on its own (1-2 min). Check the Actions tab is green.
-- **Unpublish:** delete the note with Syncer or remove `publish: true`. Syncer does not delete images, so remove sensitive ones from `content/` yourself.
+- **Unpublish:** removing `publish: true` locally is not enough on its own, because the file stays in the repo. Explicitly remove the note through Quartz Syncer, then verify on GitHub that `content/<note>.md` is gone (a "Deleted via Quartz Syncer" commit) and that the deploy is green. Syncer does not delete images, so remove sensitive ones from `content/` yourself.
 - **Images and links:** `![[Attachments/name.png]]` and `[[Note name]]`. Link and embed only published notes.
 - **Verify:** open the page in a private window. GitHub Pages caches for 10 min.
 - **Stale or deleted note still visible:** hard refresh (Cmd+Shift+R) or wait 10 min. Quartz loads its note index once per session, so an open tab does not update.
