@@ -233,3 +233,56 @@ footer a {
     color: var(--darkgray);
   }
 }
+
+// Homepage (content/index.md): lead intro, then plain-Markdown lists shown as hairline-separated rows.
+// Scoped by slug and #quartz-root so lists in articles and in popovers (appended to body) keep their normal look.
+body[data-slug="index"] #quartz-root article {
+  .markdown-preview-view > p:first-child {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--dark);
+  }
+
+  h2 {
+    font-size: 1.375rem;
+    margin: 2.5rem 0 0.75rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--lightgray);
+  }
+
+  li {
+    padding: 0.5rem 0 1rem;
+    border-bottom: 1px solid var(--lightgray);
+
+    > p {
+      margin: 0;
+    }
+
+    // Row title: a link with a ~44px touch target; the description sits right under it.
+    > p:first-child {
+      font-family: var(--headerFont);
+      font-size: 1.25rem;
+      line-height: 1.4;
+
+      a {
+        display: inline-block;
+        padding: 0.5rem 0;
+      }
+    }
+
+    > p + p {
+      margin-top: -0.25rem;
+      color: var(--gray);
+    }
+  }
+
+  // The footer already draws a rule under the last list.
+  ul:last-child > li:last-child {
+    border-bottom: 0;
+  }
+}

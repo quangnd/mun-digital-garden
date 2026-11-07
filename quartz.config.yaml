@@ -84,6 +84,7 @@ plugins:
     layout:
       position: right
       priority: 30
+      condition: not-index
   - source: "@quartz-community/crawl-links"
     enabled: true
     options:
@@ -182,6 +183,7 @@ plugins:
     layout:
       position: right
       priority: 10
+      condition: not-index
   - source: "@quartz-community/search"
     enabled: true
     layout:
@@ -195,6 +197,7 @@ plugins:
     layout:
       position: right
       priority: 50
+      condition: not-index
   - source: "@quartz-community/article-title"
     enabled: true
     layout:
@@ -205,6 +208,7 @@ plugins:
     layout:
       position: beforeBody
       priority: 20
+      condition: not-index
   - source: "@quartz-community/tag-list"
     enabled: false
     layout:
@@ -245,8 +249,7 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        GitHub: https://github.com/quangnd/mun-digital-garden
     layout:
       position: footer
       priority: 50
