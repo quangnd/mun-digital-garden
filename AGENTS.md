@@ -15,3 +15,10 @@ npx quartz plugin install
 npx quartz build            # output in public/
 npx quartz build --serve    # local preview on :8080
 ```
+
+## Review policy
+
+- An independent Reviewer is mandatory for privacy, security, the publishing pipeline (`quartz.config.yaml` publish filters/plugins, `.github/workflows/`, Pages/Actions settings), significant code changes, and complex UI/navigation.
+- It is optional for small documentation, font, or straightforward configuration changes.
+- When the Reviewer is skipped, the PR body records a brief reason.
+- The user's "stop for my review" is the merge gate and does not replace the Reviewer.
