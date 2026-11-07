@@ -1,17 +1,21 @@
-# Quartz v5
+# Mun Digital Garden
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+A [Quartz](https://quartz.jzhao.xyz/) v5 digital garden with the default theme and layout. Only the notes in `content/` are published, to https://quangnd.github.io/mun-digital-garden.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+## Local development
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+```sh
+npm ci
+npx quartz plugin install
+npx quartz build --serve   # http://localhost:8080
+```
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+Requires Node >= 22 and npm >= 10.9.2.
 
-## Sponsors
+## Deploy
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+Every push to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages.
+
+One-time setup: repository Settings -> Pages -> Source: GitHub Actions.
+
+`docs/` is the upstream Quartz reference and is not published.
