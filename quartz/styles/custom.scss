@@ -47,6 +47,7 @@ h6 {
   font-weight: 500;
 }
 
+.page .article-title,
 .page article > h1 {
   font-size: 2.125rem; // ~34px mobile
   line-height: 1.25;
@@ -212,5 +213,23 @@ footer a {
 @media (max-width: 800px) {
   .page-title {
     font-size: 1.5rem;
+  }
+}
+
+// Search: native styles mix --tertiary at 60% (below AA) and hide the input outline.
+.search > .search-container > .search-space {
+  > input:focus-visible {
+    outline: 2px solid var(--mun-focus);
+    outline-offset: 2px;
+  }
+
+  > .search-layout .highlight {
+    background: color-mix(in srgb, var(--secondary) 22%, var(--light));
+    color: var(--dark);
+  }
+
+  > .search-layout > .results-container .result-card p,
+  > .search-layout > .results-container .result-card h3 {
+    color: var(--darkgray);
   }
 }
