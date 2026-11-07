@@ -137,3 +137,4 @@ The owner explicitly approved the preparation branch, draft PR, and three issues
 | 2026-11-07 | Keep design decisions in root `DESIGN.md` | Requested by owner |
 | 2026-11-07 | `mun.` wordmark and compact `m` favicon exports | Accepted by owner |
 | 2026-11-07 | Three implementation slices and dark palette | Proposed implementation starting point |
+| 2026-11-07 | UI-2 homepage: Vietnamese intro sentence supplied with the task; "Start here" -> Garden map; selected rows (Spaced repetition, First post garden) with descriptions copied from the notes; no subject-path section until more than one subject has real notes; Graph, backlinks, TOC and content-meta hidden on the homepage via `condition: not-index`; footer links reduced to the repository | Provisional wording, for owner review |
