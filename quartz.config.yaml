@@ -100,6 +100,8 @@ plugins:
     order: 92
   - source: "@quartz-community/quartz-fonts"
     enabled: true
+    options:
+      header: Be Vietnam Pro
   - source: "@quartz-themes/core"
     enabled: false
     options:
