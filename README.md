@@ -32,6 +32,6 @@ One-time setup: repository Settings -> Pages -> Source: GitHub Actions.
 
 ### Privacy
 
-`explicit-publish` is on: only notes with `publish: true` are rendered on the site. Attachments (images, PDFs, SVGs) are not filtered: every non-Markdown file in `content/` is public on the site, flagged or not. `.canvas` and `.base` files are excluded from the site. It does not make the repo private. Any file committed to this public repo (notes without the flag, images) is readable on GitHub and stays in git history after deletion. Never sync sensitive files. If one slips through, rotate any secret and ask the owner about a history rewrite (force push).
+`explicit-publish` is on: only notes with `publish: true` are rendered on the site. Non-Markdown attachments (images, PDFs, SVGs) are not protected by `publish: true`: unless excluded by Quartz ignore rules, they may be publicly served by the website. `.canvas` and `.base` files are excluded. Regardless of these rules, every file committed to this public GitHub repository stays accessible through GitHub and its git history, even after deletion. Never sync sensitive files. If one slips through, rotate any secret and ask the owner about a history rewrite (force push).
 
 Syncer pushes straight to `main`, so `git pull` before local edits and expect `main` to move while a PR is open.
