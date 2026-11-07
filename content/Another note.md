@@ -2,8 +2,10 @@
 publish: true
 title: Another note
 created: 2026-11-07T13:53:45.570Z
-modified: 2026-11-07T13:57:18.314Z
+modified: 2026-11-07T14:00:05.934Z
 ---
+
+# Another note
 
 > It's a good day to die
 > \-- Jason hoang
