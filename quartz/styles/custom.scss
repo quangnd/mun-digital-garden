@@ -292,8 +292,13 @@ article {
     }
   }
 
+  // Quartz makes these boxes scroll containers, which clips the focus outline on top and left.
+  // The list never needs to scroll here (max-height is none).
   .backlinks {
+    overflow: visible;
+
     > ul.overflow {
+      overflow: visible;
       max-height: none;
       margin: 0.25rem 0 0;
     }
