@@ -38,6 +38,6 @@ Syncer pushes straight to `main`, so `git pull` before local edits and expect `m
 
 ## Homepage ownership
 
-`content/index.md` is the homepage. Its history shows only edits by Mun (`10ba5ca`, `a2edd2d`); Quartz Syncer has never published it. Syncer would overwrite it if the vault contains a note named `index` with `publish: true`.
+`content/index.md` is the homepage. Since this garden was set up (`10ba5ca`), its only edits are by Mun (`10ba5ca`, `a2edd2d`); Quartz Syncer has never published it. Syncer would overwrite it if the vault contains a note named `index` with `publish: true`.
 
 Owner action: do not publish a vault note named `index` (or keep this repo version authoritative and never sync one over it). Edits made here do not update the vault.
