@@ -235,8 +235,8 @@ footer a {
 }
 
 // Homepage (content/index.md): lead intro, then plain-Markdown lists shown as hairline-separated rows.
-// Scoped by slug so lists in articles keep their normal look.
-body[data-slug="index"] article {
+// Scoped by slug and #quartz-root so lists in articles and in popovers (appended to body) keep their normal look.
+body[data-slug="index"] #quartz-root article {
   .markdown-preview-view > p:first-child {
     font-size: 1.25rem;
     line-height: 1.7;
