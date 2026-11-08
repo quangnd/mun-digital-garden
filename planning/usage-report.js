@@ -1,6 +1,8 @@
 // Usage report. Run in codemode (ultimate.* is injected). Set ROOT to the coordinator's conversation id.
-const ROOT = 3116;
+const ROOT = undefined; // set to the coordinator's conversation id
+if (!Number.isInteger(ROOT) || ROOT <= 0) throw new Error('Set ROOT to the coordinator\'s conversation id (a positive integer)');
 const convs = await ultimate.conversations();
+if (!convs.some(c => c.id === ROOT)) throw new Error(`Conversation ${ROOT} not found; check ROOT`);
 const pid = c => c.owner?.conversationId ?? c.parent?.conversationId;
 const ids = [ROOT];
 for (let i = 0; i < ids.length; i++) for (const c of convs) if (pid(c) === ids[i] && !ids.includes(c.id)) ids.push(c.id);
