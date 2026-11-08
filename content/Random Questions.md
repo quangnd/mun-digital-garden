@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-10-28T02:27:33.492Z
-modified: 2026-11-07T14:54:43.480Z
+modified: 2026-11-07T15:36:00.744Z
 ---
 
 ### vẩn vơ
@@ -33,10 +33,10 @@ Checklist
 
 **Idea Qualification Checklist**
 
-\[ ] Tôi có thể mô tả vấn đề cụ thể trong hai câu.
-\[ ] Tôi biết ai gặp vấn đề và hiện tại họ giải quyết thế nào.
-\[ ] Tôi xác định được kết quả mong muốn, không chỉ công nghệ muốn sử dụng.
-\[ ] Tôi có metric hoặc dấu hiệu quan sát được để biết ý tưởng thành công.
-\[ ] Tôi biết giả định quan trọng nhất cần kiểm chứng.
-\[ ] Tôi có một thử nghiệm nhỏ, có thời hạn và chi phí giới hạn.
-\[ ] Tôi biết lúc nào cần dừng, kể cả khi công nghệ vẫn rất thú vị.
+- [ ] Tôi có thể mô tả vấn đề cụ thể trong hai câu.
+- [ ] Tôi biết ai gặp vấn đề và hiện tại họ giải quyết thế nào.
+- [ ] Tôi xác định được kết quả mong muốn, không chỉ công nghệ muốn sử dụng.
+- [ ] Tôi có metric hoặc dấu hiệu quan sát được để biết ý tưởng thành công.
+- [ ] Tôi biết giả định quan trọng nhất cần kiểm chứng.
+- [ ] Tôi có một thử nghiệm nhỏ, có thời hạn và chi phí giới hạn.
+- [ ] Tôi biết lúc nào cần dừng, kể cả khi công nghệ vẫn rất thú vị.
