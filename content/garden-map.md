@@ -1,5 +1,6 @@
 ---
 publish: true
+created: 2026-11-07
 title: Garden map
 tags:
   - meta
