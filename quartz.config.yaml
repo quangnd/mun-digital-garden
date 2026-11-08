@@ -181,8 +181,8 @@ plugins:
   - source: "@quartz-community/graph"
     enabled: true
     layout:
-      position: right
-      priority: 10
+      position: afterBody
+      priority: 20
       condition: not-index
   - source: "@quartz-community/search"
     enabled: true
@@ -195,8 +195,8 @@ plugins:
   - source: "@quartz-community/backlinks"
     enabled: true
     layout:
-      position: right
-      priority: 50
+      position: afterBody
+      priority: 10
       condition: not-index
   - source: "@quartz-community/article-title"
     enabled: true
@@ -276,7 +276,7 @@ plugins:
         - tags
         - aliases
       excludedProperties: []
-      hidePropertiesView: false
+      hidePropertiesView: true
       delimiters: ---
       language: yaml
     order: 5
@@ -294,6 +294,7 @@ layout:
     "404":
       positions:
         beforeBody: []
+        afterBody: []
         left: []
         right: []
     content: {}
@@ -301,11 +302,13 @@ layout:
       exclude:
         - reader-mode
       positions:
+        afterBody: []
         right: []
     tag:
       exclude:
         - reader-mode
       positions:
+        afterBody: []
         right: []
     canvas: {}
     bases: {}
