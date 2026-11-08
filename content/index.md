@@ -2,7 +2,7 @@
 publish: true
 title: Vườn ghi chép
 created: 2026-11-07
-modified: 2026-11-08T07:01:11.026Z
+modified: 2026-11-08T07:28:13.966Z
 ---
 
 Đây là nơi tôi ghi lại những điều đang học, những ý tưởng đang thử và những câu hỏi bất chợt nảy sinh.
@@ -11,16 +11,13 @@ Một file như [[Random things]] sẽ liên tục được thay đổi.
 
 ## Bắt đầu
 
-- [[garden-map|Garden map]]
+- [[Làm một chút mỗi ngày]]
 
-  A garden grows from small notes that link to each other.
+Để tốt hơn một chút mỗi ngày
 
-## Ghi chép chọn lọc
+## My thoughts on AI
 
-- [[spaced-repetition|Spaced repetition]]
-
-  A way to remember things by reviewing them at growing intervals.
-
-- [[First post garden|Thử title tiếng việt xem sao]]
-
-  This is my first published note.
+- [[On AI - Mindset]]
+- [[On AI - Ảo tưởng hiểu biết]]
+- [[On AI - Mental health]]
+- [[On AI - Building an AI Ecosystem That Makes Me Stronger]]
