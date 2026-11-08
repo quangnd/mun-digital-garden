@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Mun Digital Garden
+  pageTitle: Mun Garden
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -175,6 +175,8 @@ plugins:
     enabled: true
   - source: "@quartz-community/explorer"
     enabled: true
+    options:
+      title: Ghi chép
     layout:
       position: left
       priority: 50
@@ -226,7 +228,7 @@ plugins:
       priority: 30
       group: toolbar
   - source: "@quartz-community/reader-mode"
-    enabled: true
+    enabled: false
     layout:
       position: left
       priority: 35
@@ -245,11 +247,12 @@ plugins:
     layout:
       position: afterBody
       priority: 10
-  - source: "@quartz-community/footer"
+  - source: ./plugins/mun-footer
     enabled: true
     options:
+      text: Ghi chép của Quang (Mun).
       links:
-        GitHub: https://github.com/quangnd/mun-digital-garden
+        Source: https://github.com/quangnd/mun-digital-garden
     layout:
       position: footer
       priority: 50

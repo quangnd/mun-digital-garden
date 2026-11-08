@@ -1,17 +1,17 @@
 ---
 publish: true
-title: Welcome to the garden
+title: Vườn ghi chép
 ---
 
 Đây là nơi tôi ghi lại những điều đang học, những ý tưởng đang thử và những câu hỏi muốn nghĩ tiếp.
 
-## Start here
+## Bắt đầu
 
 - [[garden-map|Garden map]]
 
   A garden grows from small notes that link to each other.
 
-## Selected notes
+## Ghi chép chọn lọc
 
 - [[spaced-repetition|Spaced repetition]]
 

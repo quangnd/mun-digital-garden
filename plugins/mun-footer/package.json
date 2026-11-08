@@ -1,0 +1,36 @@
+{
+  "name": "mun-footer",
+  "version": "1.0.0",
+  "description": "Quiet personal footer for the Mun garden: one line, Source, RSS and Quartz attribution",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./components": "./components.js"
+  },
+  "quartz": {
+    "name": "mun-footer",
+    "displayName": "Mun Footer",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "components": {
+      "MunFooter": {
+        "displayName": "Mun Footer",
+        "defaultPosition": "footer",
+        "defaultPriority": 50
+      }
+    },
+    "optionSchema": {
+      "text": {
+        "type": "string"
+      },
+      "links": {
+        "type": "object"
+      }
+    }
+  }
+}
