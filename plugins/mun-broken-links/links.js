@@ -1,10 +1,6 @@
 import { posix } from "node:path"
 import { isRelativeURL, simplifySlug } from "@quartz-community/utils"
 
-// A file extension that marks an attachment (image, pdf, ...). A note name may contain a dot, so the
-// extension must start with a letter ("v1.2" is a note); .md and .html are note extensions.
-const FILE_EXTENSION = /\.(?!(?:md|html?)$)[a-z][a-z0-9]{0,4}$/i
-
 // Same target alias-redirects writes the redirect page to (`<target>.html`).
 const aliasSlug = (slug, alias) => {
   const target = isRelativeURL(alias)
@@ -18,23 +14,37 @@ const aliasSlug = (slug, alias) => {
  * published markdown pages plus the virtual folder, tag and canvas pages. Notes dropped by the
  * publish filters are not in it, which is why ctx.allSlugs (every file on disk) is not used.
  */
-export function publishedSlugs(allFiles) {
-  const known = new Set()
+export function publishedSlugs(allFiles, attachments = []) {
+  // Attachments (images, pdf, ...) are files on disk that are not notes; they are served as is.
+  const known = new Set(attachments)
   for (const file of allFiles) {
     const slug = file.slug
     if (typeof slug !== "string") continue
     known.add(slug)
     // `[[folder]]` links to `folder`, which the host serves from `folder/index.html`.
     if (slug.endsWith("/index")) known.add(slug.slice(0, -"/index".length))
-    for (const alias of file.aliases ?? []) known.add(aliasSlug(slug, alias))
+    for (const alias of file.aliases ?? []) {
+      const target = aliasSlug(slug, alias)
+      known.add(target)
+      if (target.endsWith("/index")) known.add(target.slice(0, -"/index".length))
+    }
   }
   return known
 }
 
-/** True for a link target that looks like a note and is not on the published site. */
+/** Slugs of the non-markdown files on disk (ctx.allSlugs is parallel to ctx.allFiles). */
+export function attachmentSlugs(ctx) {
+  const slugs = []
+  ctx.allFiles.forEach((fp, i) => {
+    if (!fp.endsWith(".md")) slugs.push(ctx.allSlugs[i])
+  })
+  return slugs
+}
+
+/** True for an internal link target that is neither a published page nor an attachment. */
 export function isUnresolved(slug, known) {
   if (!slug || known.has(slug)) return false
-  return !FILE_EXTENSION.test(slug.slice(slug.lastIndexOf("/") + 1))
+  return true
 }
 
 // crawl-links sets `data-slug` as a literal key; a parsed tree would carry it as `dataSlug`.
@@ -74,9 +84,9 @@ export function markUnresolvedLinks(root, known) {
 /** A render-time tree transform (see TreeTransform in quartz/plugins/types.ts). */
 export function unresolvedLinksTransform() {
   const cache = new WeakMap()
-  return (root, _slug, { allFiles }) => {
+  return (root, _slug, { allFiles, ctx }) => {
     let known = cache.get(allFiles)
-    if (!known) cache.set(allFiles, (known = publishedSlugs(allFiles)))
+    if (!known) cache.set(allFiles, (known = publishedSlugs(allFiles, attachmentSlugs(ctx))))
     markUnresolvedLinks(root, known)
   }
 }

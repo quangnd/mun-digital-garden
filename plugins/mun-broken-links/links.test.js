@@ -11,10 +11,16 @@ const files = [
   { slug: "folder/index" },
   { slug: "folder/sub/nested-note", aliases: ["./sibling"] },
   { slug: "tags/alpha" },
-  { slug: "public-b", aliases: ["an-alias", "tên-khác", "/permalink/"] },
+  { slug: "public-b", aliases: ["an-alias", "tên-khác", "/permalink/", "legacy/index"] },
   { slug: "ghi-chép-có-thật" },
 ]
-const known = publishedSlugs(files)
+const known = publishedSlugs(files, [
+  "attachments/doc.pdf",
+  "pic.png",
+  "a/b/photo.jpeg",
+  "map.geojson",
+  "a/doc.pdf",
+])
 
 test("published pages, folder pages, tags and unlisted pages resolve", () => {
   for (const slug of [
@@ -44,16 +50,23 @@ test("a note that is not published is unresolved, including diacritics and nesti
 })
 
 test("alias targets resolve, including relative, Vietnamese and permalink aliases", () => {
-  for (const slug of ["an-alias", "tên-khác", "permalink", "folder/sub/sibling"]) {
+  for (const slug of ["an-alias", "tên-khác", "permalink", "folder/sub/sibling", "legacy"]) {
     assert.equal(isUnresolved(slug, known), false, slug)
   }
 })
 
-test("links to files (attachments) are never unresolved, but a dot in a note name is not a file", () => {
-  for (const slug of ["attachments/doc.pdf", "pic.png", "a/b/photo.jpeg"]) {
+test("attachments on disk resolve; an unpublished note with a dot in its name does not", () => {
+  for (const slug of [
+    "attachments/doc.pdf",
+    "pic.png",
+    "a/b/photo.jpeg",
+    "map.geojson",
+    "a/doc.pdf",
+  ]) {
     assert.equal(isUnresolved(slug, known), false, slug)
   }
   assert.equal(isUnresolved("node.js-notes", known), true)
+  assert.equal(isUnresolved("draft.final", known), true)
   assert.equal(isUnresolved("v1.2", known), true)
   assert.equal(isUnresolved("", known), false)
 })
@@ -132,7 +145,10 @@ test("the page type never matches a page, adds one tree transform and ships a va
 test("the transform reads allFiles once per build and rewrites the tree it is given", () => {
   const [transform] = MunBrokenLinks().treeTransforms({})
   const a = link({ href: "./private-note", className: ["internal"], "data-slug": "private-note" })
-  transform({ type: "root", children: [a] }, "note-a", { allFiles: files })
+  transform({ type: "root", children: [a] }, "note-a", {
+    allFiles: files,
+    ctx: { allFiles: ["a.md", "pic.png"], allSlugs: ["a", "pic.png"] },
+  })
   assert.equal(a.properties.href, undefined)
   assert.equal(a.properties.role, "link")
 })
