@@ -323,18 +323,6 @@ article {
   }
 }
 
-// Reader mode fades the sidebars and brings them back on hover. Backlinks and Graph now sit below
-// the article, so they follow the same rule.
-:root[reader-mode="on"] .page-footer {
-  opacity: 0;
-  transition: opacity 0.2s;
-
-  &:hover,
-  &:focus-within {
-    opacity: 1;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -366,14 +354,49 @@ article {
   }
 }
 
-footer,
-footer p,
-footer a {
-  opacity: 1;
+// Footer (plugins/mun-footer): one quiet line, then small links that wrap on narrow screens.
+// Muted ink (--gray) stays above AA contrast; links keep a thin underline so colour is not the only cue.
+footer {
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+  color: var(--gray);
+  font-size: 0.875rem;
+  line-height: 1.6;
+
+  // Quartz sets text colour on p and li directly, so footer's own colour would not reach them.
+  p,
+  li {
+    margin: 0;
+    color: var(--gray);
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  // ~44px touch targets, like the backlinks.
+  a {
+    display: inline-block;
+    padding: 0.75rem 0;
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+
+    &:hover {
+      color: var(--tertiary);
+      text-decoration-thickness: 2px;
+    }
+  }
 }
 
-// Mobile header: Quartz keeps title, Search, dark mode and reader mode in one sticky row with the
-// Explorer button. Smaller title and ~44px targets; Search becomes icon-only (still labelled) on phones.
+// Mobile header: Quartz keeps title, Search and dark mode in one sticky row with the Explorer
+// button. Smaller title and ~44px targets; Search becomes icon-only (still labelled) on phones.
 @media (max-width: 800px) {
   // Anchor jumps must clear the sticky header (~82px); Quartz's 4rem would hide the heading's top.
   html {
@@ -404,8 +427,7 @@ footer a {
       height: 2.75rem;
     }
 
-    .darkmode,
-    .readermode {
+    .darkmode {
       width: 2.75rem;
       height: 2.75rem;
 

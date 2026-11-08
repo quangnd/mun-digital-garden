@@ -13,19 +13,19 @@ Update this file in the same PR when an approved design decision changes. Issues
 A personal, editorial digital garden: warm, quiet, readable, and connected. It should feel authored by a person, not a default documentation site or a marketing landing page. Reading and following meaningful links come first.
 
 - Platform: Quartz 5, with Obsidian + Quartz Syncer authoring.
-- Name: Mun Digital Garden. “Mun Journal” names the visual direction, not a rebrand or a requirement to rename the site.
+- Name: Mun Garden is the name shown in the header (settled with owner, UI-4). The repository and the published path keep `mun-digital-garden`. “Mun Journal” names the visual direction, not a second brand.
 - Language: Vietnamese and English, with Vietnamese diacritics treated as first-class content.
 - Audience: a new visitor discovering themes, and a returning reader searching for a note.
 - Scope: a small first version, designed to evolve.
 
 ## Boundaries
 
-- Preserve Quartz Search, Explorer, Graph, popovers, reader mode, dark-mode behavior, and SPA navigation. Restyle or reposition supported components; do not copy the mockup's simulated implementations.
+- Preserve Quartz Search, Explorer, Graph, popovers, dark-mode behavior, and SPA navigation. Restyle or reposition supported components; do not copy the mockup's simulated implementations. Reader mode is switched off (UI-4, wording and removal pending owner review; see "Header, sidebar and footer").
 - Preserve `explicit-publish`, publishing exclusions, Syncer behavior, base URL, deployment workflow, and content-index behavior. Privacy hardening can progress separately; rebase onto its accepted result.
 - Do not read or edit any private Obsidian vault. Work only with this repository's intentional public content.
 - Keep upstream `docs/` unchanged. Project design references live under `design/`; implementation instructions live under `planning/ui/`.
 - Prefer `quartz.config.yaml` for supported theme/layout settings and `quartz/styles/custom.scss` for project styles. Inspect the installed Quartz 5 plugin schema before choosing asset and layout options. Do not assume Quartz 4 APIs apply.
-- Avoid edits to plugin/core JavaScript, `base.scss`, or frame registries. If a concrete requirement needs one, explain the limitation and isolate the smallest change for review before proceeding.
+- Avoid edits to plugin/core JavaScript, `base.scss`, or frame registries. If a concrete requirement needs one, explain the limitation and isolate the smallest change for review before proceeding. The one exception so far is the footer: the installed `@quartz-community/footer` only renders "Created with Quartz" plus a link map, so `plugins/mun-footer` (a small local plugin in plain JavaScript, no build step) replaces it. Nothing under `node_modules/`, `quartz/` core or `base.scss` changed.
 - No diagonal-arrow decorations, repeated arrow affordances, gradients, ornamental textures, automatic animations, decorative emoji, or dashboard-style card grids.
 - No automatic metadata workflow such as seedling/evergreen status, note counts, “recently updated” feeds, or filters in this first version.
 
@@ -71,7 +71,7 @@ Order:
 2. A clear “start here” link to a real published note or MOC.
 3. A few intentional subject paths, each with a short description and a real destination.
 4. A small list of selected notes with title, description, and optional subject label.
-5. A quiet personal footer; retain framework attribution where appropriate without the default community links dominating.
+5. A quiet personal footer: one personal line, then Source, RSS and a small "Made with Quartz" attribution, so the framework credit stays without the default community links dominating.
 
 Use a simple row/list treatment with hairline separators. Subject groups may use columns on desktop and stack on mobile. Avoid a large hero illustration and large empty marketing hero area. Graph is not a primary homepage feature.
 
@@ -89,6 +89,23 @@ Prefer an explicit-published homepage note and ordinary Markdown links, plus sco
 - Keep internal links underlined and external-link identification meaningful. Remove decorative arrows introduced by this design; do not indiscriminately hide all external-link indicators or accessibility labels.
 - Images retain aspect ratio and fit the column. Respect useful authored image widths; do not stretch small screenshots to full width. Tables and code can scroll horizontally within their own containers without making the entire page overflow.
 - Preserve headings/anchors, footnotes, callouts, lists, Markdown images, embeds, and syntax highlighting.
+
+## Header, sidebar and footer
+
+UI-4 refines the chrome around the reading column. Navigation behavior, the navigation tree and the mobile menu are native Quartz and unchanged.
+
+Settled with owner:
+
+- The header name is "Mun Garden", plain text in the title font, linking to the homepage. It comes from `configuration.pageTitle`, which Quartz also uses as the RSS feed title and `og:site_name`.
+- No emoji, tree icon or other symbol beside the name.
+- The favicon stays the compact `m`; colours and fonts do not change.
+
+Wording pending owner review (provisional; it lives in `quartz.config.yaml` and `content/index.md`, so changing it needs no code):
+
+- Explorer title "Ghi chép" (desktop). The mobile menu is an icon button; its accessible label is hard-coded to "Explorer" by the installed plugin.
+- Footer: "Ghi chép của Quang (Mun)." plus Source (the repository), RSS and "Made with Quartz". The RSS link is relative to the site root (`index.xml`, emitted by content-index), so it follows the `/mun-digital-garden/` base path, and it skips the SPA router so the browser opens the feed directly.
+- Homepage title and headings: "Vườn ghi chép", "Bắt đầu", "Ghi chép chọn lọc". The links, descriptions and intro sentence are unchanged.
+- Reader mode removed (`enabled: false`). Search and dark mode stay; Search takes the free width, so the toolbar has no gap.
 
 ## Mobile
 
@@ -121,6 +138,7 @@ Static brand exports were rendered and inspected. The reference UI has only synt
 | UI-1 | Typography, colors, link treatment, approved brand assets | No navigation rewrite or homepage curation |
 | UI-2 | Curated homepage using real published content | No dynamic feeds, filters, or taxonomy engine |
 | UI-3 | Reading layout, responsive refinement, interaction verification | Preserve native component behavior; no automatic JS rewrite |
+| UI-4 | Header name, Explorer title, personal footer, homepage headings, no reader mode | No navigation rewrite; homepage change limited to headings; publishing, privacy, base URL unchanged |
 
 One PR per slice. Verify the build and relevant interactions; collect a bounded set of before/after views rather than an open-ended screenshot campaign. Each PR reports what changed, evidence, review outcome, and remaining limitations. Update this file if an owner-approved decision changes.
 
@@ -139,3 +157,4 @@ The owner explicitly approved the preparation branch, draft PR, and three issues
 | 2026-11-07 | Three implementation slices and dark palette | Proposed implementation starting point |
 | 2026-11-07 | UI-2 homepage: Vietnamese intro sentence supplied with the task; "Start here" -> Garden map; selected rows (Spaced repetition, First post garden) with descriptions copied from the notes; no subject-path section until more than one subject has real notes; Graph, backlinks, TOC and content-meta hidden on the homepage via `condition: not-index`; footer links reduced to the repository | Provisional wording, for owner review |
 | 2026-11-08 | UI-3 reading layout: article column capped at 40rem (~75 Vietnamese characters per line at 17px); backlinks, then a compact Graph, move to `afterBody` (Graph stays reachable, no longer in the reading area; TOC stays right); homepage drops its empty right track so navigation and column centre together; mobile header uses ~44px targets with an icon-only (still labelled) Search at 480px and below | Provisional, for owner review |
+| 2026-11-08 | UI-4 header and footer. Settled with owner: the header name is "Mun Garden" as plain text, no emoji or tree icon, the `m` favicon, colours and fonts, header links to home. Provisional, for owner review: Explorer title "Ghi chép"; footer line "Ghi chép của Quang (Mun).", Source, RSS and "Made with Quartz" via the local `plugins/mun-footer`; homepage title and headings in Vietnamese; reader mode removed | Mixed: see "Header, sidebar and footer" |
