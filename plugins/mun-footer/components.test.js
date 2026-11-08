@@ -23,3 +23,16 @@ test("renders the personal line, configured links, RSS and Quartz attribution", 
   assert.match(html, /data-router-ignore/)
   assert.match(html, /Made with <a href="https:\/\/quartz\.jzhao\.xyz\/">Quartz<\/a>/)
 })
+
+test("404 uses the absolute base path, or the root when serving", () => {
+  const render404 = (serve) =>
+    render(
+      h(MunFooter({}), {
+        fileData: { slug: "404" },
+        ctx: { argv: { serve } },
+        cfg: { baseUrl: "quangnd.github.io/mun-digital-garden" },
+      }),
+    )
+  assert.match(render404(false), /href="\/mun-digital-garden\/index\.xml"/)
+  assert.match(render404(true), /href="\/index\.xml"/)
+})
