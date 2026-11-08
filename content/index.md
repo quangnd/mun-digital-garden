@@ -1,10 +1,13 @@
 ---
 publish: true
-created: 2026-11-07
 title: Vườn ghi chép
+created: 2026-11-07
+modified: 2026-11-08T07:01:11.026Z
 ---
 
-Đây là nơi tôi ghi lại những điều đang học, những ý tưởng đang thử và những câu hỏi muốn nghĩ tiếp.
+Đây là nơi tôi ghi lại những điều đang học, những ý tưởng đang thử và những câu hỏi bất chợt nảy sinh.
+
+Một file như [[Random things]] sẽ liên tục được thay đổi.
 
 ## Bắt đầu
 
