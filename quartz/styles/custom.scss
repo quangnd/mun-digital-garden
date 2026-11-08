@@ -156,6 +156,59 @@ a {
   }
 }
 
+// Link to a note that is not on the published site (plugins/mun-broken-links). It has no href, so
+// the base `a` rules above leave it plain: muted text with a dashed underline (5.2:1 on paper in
+// light mode, 8.0:1 in dark). Colour is not the only cue; keyboard focus uses the :focus-visible ring.
+a.unresolved-link {
+  color: var(--gray);
+  cursor: pointer;
+  text-decoration: underline dashed;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+
+  &:hover {
+    color: var(--darkgray);
+    text-decoration-thickness: 2px;
+  }
+}
+
+// Notice shown when such a link is activated. It is a live region that is emptied, not hidden,
+// between uses, so its invisible state is opacity, never display or visibility.
+.unresolved-notice {
+  position: fixed;
+  left: 50%;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  z-index: 1000;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: min(28rem, calc(100vw - 2rem));
+  padding: 0.625rem 1rem;
+  background: var(--textHighlight);
+  color: var(--dark);
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+
+  &[data-open] {
+    opacity: 1;
+  }
+
+  &[data-edge="top"] {
+    bottom: auto;
+    top: max(1rem, env(safe-area-inset-top));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
 // Navigation and component chrome drop underline noise. Popovers hold article content, so their
 // inline links keep the underline from the rules above (popover breadcrumbs match .breadcrumb-container).
 .page-title a,

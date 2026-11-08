@@ -1,0 +1,25 @@
+{
+  "name": "mun-broken-links",
+  "version": "1.0.0",
+  "description": "Internal links to notes that are not published show a short notice instead of navigating",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "quartz": {
+    "name": "mun-broken-links",
+    "displayName": "Mun Broken Links",
+    "category": "pageType",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "optionSchema": {
+      "message": {
+        "type": "string"
+      }
+    }
+  }
+}

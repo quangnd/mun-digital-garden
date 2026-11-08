@@ -256,6 +256,8 @@ plugins:
     layout:
       position: footer
       priority: 50
+  - source: ./plugins/mun-broken-links
+    enabled: true
   - source: "@quartz-community/recent-notes"
     enabled: false
   - source: "@quartz-community/spacer"
