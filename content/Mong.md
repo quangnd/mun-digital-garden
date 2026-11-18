@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-11-04
-modified: 2026-11-18T01:45:24.231Z
+modified: 2026-11-18T01:56:44.916Z
 tags:
   - self-poem
 ---
@@ -11,7 +11,7 @@ Trôi dạt giữa cánh đồng
 Giữa một ngày đầy gió
 Cảm nhận vị mênh mông
 
-Ta vốn yêu mầu hồng
+Ta vốn yêu màu hồng
 Nhưng vì ngại nên trốn
 Dưới bầu trời xanh lam
 Giữa những tiếng càm ràm
