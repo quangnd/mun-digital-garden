@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-11-04
-modified: 2026-11-18T01:56:44.916Z
+modified: 2026-11-18T02:05:57.815Z
 tags:
   - self-poem
 ---
