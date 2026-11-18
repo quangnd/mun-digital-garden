@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: quangnd.github.io/mun-digital-garden
+  baseUrl: quangnd.com
   ignorePatterns:
     - private
     - templates
