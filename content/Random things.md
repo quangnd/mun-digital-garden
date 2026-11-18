@@ -1,10 +1,24 @@
 ---
 publish: true
 created: 2026-09-11
-modified: 2026-11-08T07:02:15.160Z
+modified: 2026-11-18T01:43:22.681Z
 ---
 
 ## 📝 cóp nhặt
+
+Bụng dạ dạo này hơi chán
+
+---
+
+![[Attachments/IMG_8317.jpeg|395]]
+
+See this movie someday
+
+---
+
+Tôi nhận ra mình dành quá nhiều thời gian thử các công cụ AI mới. Cứ mỗi lần một công cụ xuất hiện, tôi lại muốn trải nghiệm. Nhưng đôi khi tôi quên mất vấn đề ban đầu mình muốn giải quyết là gì.
+
+---
 
 PR đầu tiên contribute vào một dự án public trên Github được merge https://github.com/HazAT/ultimate/pull/104 🫡   (2026-11-08)
 
