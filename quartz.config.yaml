@@ -173,10 +173,11 @@ plugins:
     enabled: true
   - source: "@quartz-community/tag-page"
     enabled: true
-  - source: "@quartz-community/explorer"
+  - source: ./plugins/mun-explorer
     enabled: true
     options:
       title: Ghi chép
+      excludeSlugs: [about]
     layout:
       position: left
       priority: 50
@@ -252,6 +253,7 @@ plugins:
     options:
       text: Ghi chép của Quang (Mun).
       links:
+        About me: about
         Source: https://github.com/quangnd/mun-digital-garden
     layout:
       position: footer
