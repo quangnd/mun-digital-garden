@@ -1,8 +1,12 @@
 ---
 publish: true
 created: 2026-11-17
-modified: 2026-11-18T06:59:51.778Z
+modified: 2026-11-19T04:30:21.092Z
 ---
+
+Using agent to update the new Confluence pages based on the existing pages. I used my knowledge from my PMOS vault to fill in; the agent asked me questions about milestones and risks that it didn't know.
+
+Results are great! It saved me 1 to 2 hours compared to doing it manually.
 
 ### 2026-11-17
 
