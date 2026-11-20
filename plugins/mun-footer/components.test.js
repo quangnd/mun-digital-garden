@@ -27,7 +27,7 @@ test("renders the personal line, configured links, RSS and Quartz attribution", 
 test("404 uses the absolute base path, or the root when serving", () => {
   const render404 = (serve) =>
     render(
-      h(MunFooter({}), {
+      h(MunFooter({ links: { "About me": "about" } }), {
         fileData: { slug: "404" },
         ctx: { argv: { serve } },
         cfg: { baseUrl: "quangnd.github.io/mun-digital-garden" },
@@ -35,4 +35,19 @@ test("404 uses the absolute base path, or the root when serving", () => {
     )
   assert.match(render404(false), /href="\/mun-digital-garden\/index\.xml"/)
   assert.match(render404(true), /href="\/index\.xml"/)
+  assert.match(render404(false), /href="\/mun-digital-garden\/about"/)
+  assert.match(render404(true), /href="\/about"/)
+})
+
+test("a bare link resolves from the site root at every page depth", () => {
+  const opts = { links: { "About me": "about" } }
+  assert.match(footer("index", opts), /<a href="\.\/about">About me<\/a>/)
+  assert.match(footer("tags/meta", opts), /<a href="\.\.\/about">About me<\/a>/)
+  assert.match(footer("a/b/c", opts), /<a href="\.\.\/\.\.\/about">About me<\/a>/)
+})
+
+test("an absolute link is rendered as-is, without a root prefix", () => {
+  const html = footer("a/b/c", { links: { Source: "https://example.com/repo" } })
+  assert.match(html, /<a href="https:\/\/example\.com\/repo">Source<\/a>/)
+  assert.doesNotMatch(html, /\.\.\/https/)
 })

@@ -1,0 +1,53 @@
+{
+  "name": "mun-explorer",
+  "version": "1.0.0",
+  "description": "Explorer for the Mun garden: the community Explorer plus a list of slugs to hide from the tree",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./components": "./components.js"
+  },
+  "quartz": {
+    "name": "mun-explorer",
+    "displayName": "Mun Explorer",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "components": {
+      "Explorer": {
+        "displayName": "Mun Explorer",
+        "defaultPosition": "left",
+        "defaultPriority": 50
+      }
+    },
+    "optionSchema": {
+      "title": {
+        "type": "string"
+      },
+      "folderDefaultState": {
+        "type": "enum",
+        "values": [
+          "collapsed",
+          "open"
+        ]
+      },
+      "folderClickBehavior": {
+        "type": "enum",
+        "values": [
+          "collapse",
+          "link"
+        ]
+      },
+      "useSavedState": {
+        "type": "boolean"
+      },
+      "excludeSlugs": {
+        "type": "array"
+      }
+    }
+  }
+}
