@@ -1,10 +1,27 @@
 ---
 publish: true
 created: 2026-09-11
-modified: 2026-11-18T01:43:22.681Z
+modified: 2026-11-23T15:27:03.841Z
 ---
 
 ## 📝 cóp nhặt
+
+An interesting roadmap
+https://ai-engineer-roadmap-2026.vercel.app/
+
+---
+
+Learn how to design a good system
+
+https://github.com/liquidslr/system-design-notes/tree/main/14.%20Youtube
+
+---
+
+Thought about a new shap for work from Notion's leaders
+
+https://www.notion.com/a-new-shape-for-work
+
+---
 
 Bụng dạ dạo này hơi chán
 
